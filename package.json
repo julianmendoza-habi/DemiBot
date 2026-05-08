@@ -17,11 +17,14 @@
     "url": "https://github.com/Mendo6472/DemiBot/issues"
   },
   "homepage": "https://github.com/Mendo6472/DemiBot#readme",
+  "overrides": {
+    "canvas": "^3.2.3"
+  },
   "dependencies": {
     "ascii-table": "^0.0.9",
     "axios": "^1.6.7",
     "booru": "^2.6.4",
-    "canvas": "^2.11.2",
+    "canvas": "^3.2.3",
     "chokidar": "^3.5.3",
     "color-thief-node": "^1.0.4",
     "discord.js": "^14.12.1",
