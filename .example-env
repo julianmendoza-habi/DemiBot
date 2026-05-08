@@ -2,6 +2,6 @@ DISCORD_BOT_TOKEN=Token from https://discord.com/developers/applications
 DISCORD_APPLICATION_ID=Application ID from https://discord.com/developers/applications
 TWITCH_CLIENT_ID=Client id of your twitch application on https://dev.twitch.tv/console
 TWITCH_SECRET=Client secret from your twitch application on https://dev.twitch.tv/console
-MONGODB_URI=Connection string from mongodb connection without user or password, example: mongodb+srv://<username>:<password>@aditional-fields
+MONGODB_URI=Connection string from mongodb connection without user or password, example: mongodb+srv://<username>:<db_password>@aditional-fields
 MONGODB_USERNAME=Username from your mongodb user
 MONGODB_PASSWORD=Password from your mongodb user

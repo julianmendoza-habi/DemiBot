@@ -6,6 +6,7 @@ const clientId = process.env.TWITCH_CLIENT_ID;
 
 // Function to check if the streamers are live 
 const checkStreamersStatus = async (client) => {
+    if (!client.twitchToken) return;
     //Get the streamers from the db
     const collectionName = "streamAlerts";
     const collection = client.db.collection(collectionName);

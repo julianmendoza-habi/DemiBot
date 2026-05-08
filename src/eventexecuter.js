@@ -20,13 +20,18 @@ async function Eventexecuter(client){
         //TODO: Add status to bot
     });
     //Get twitch tokens
-    const twitchToken = await getTwitchToken();
-    client.twitchToken = twitchToken;
+    try {
+        const twitchToken = await getTwitchToken();
+        client.twitchToken = twitchToken;
+    } catch (error) {
+        console.warn('Twitch credentials invalid or missing — Twitch features disabled:', error.response?.data?.message ?? error.message);
+        client.twitchToken = null;
+    }
     //Create mongoDB client
     let uri = process.env.MONGODB_URI;
     const username = encodeURIComponent(process.env.MONGODB_USERNAME);
     const password = encodeURIComponent(process.env.MONGODB_PASSWORD);
-    uri = uri.replace("<username>", username).replace("<password>", password);
+    uri = uri.replace("<username>", username).replace("<db_password>", password);
     const clientMongo = new MongoClient(uri);
     //Connect to the client
     await clientMongo.connect();
